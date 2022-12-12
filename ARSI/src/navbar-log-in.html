@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/x-icon" href="../assets/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/navbar-log-in.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>Logged In</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light bg-white py-40">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../assets/logo.png" width="60" height="60" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto text-lg gap-lg-0 gap-2">
+                        <li class="nav-item my-auto">
+                            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item my-auto">
+                            <a class="nav-link active" href="">Paket Pembelajaran</a>
+                        </li>
+                        <li class="nav-item my-auto dropdown d-flex">
+                            <div class="vertical-line d-lg-block d-none"></div>
+                            <div>
+                                <a class="dropdown-toggle ms-lg-40" href="#" role="button" id="dropdownMenuLink"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="../assets/img/avatar-1.png" class="rounded-circle" width="40" height="40"
+                                        alt="">
+                                </a>
+
+                                <ul class="dropdown-menu border-0" aria-labelledby="dropdownMenuLink">
+                                    <li><a class="dropdown-item text-lg color-palette-2" href="../member/riwayat.html">Riwayat Pembelian</a></li>
+                                    <li><a class="dropdown-item text-lg color-palette-2" href="../member/paketsaya.html">Paket Saya</a></li>
+                                    <li><a class="dropdown-item text-lg color-palette-2" href="../index.html">Log Out</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+
+    <!-- AOS Animation -->
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        document.addEventListener("scroll", function () {
+            const navbar = document.querySelector(".navbar");
+            const navbarHeight = 90;
+
+            const distanceFromTop = Math.abs(
+                document.body.getBoundingClientRect().top
+            );
+
+            console.log(distanceFromTop)
+
+            if (distanceFromTop > navbarHeight){ 
+                navbar.classList.add("fixed-top", "blur-background", "navbarTransition");
+                navbar.classList.remove("bg-light", "bg-white");
+            } else {
+                navbar.classList.add("bg-light", "bg-white");
+                navbar.classList.remove("fixed-top", "blur-background", "navbarTransition");
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

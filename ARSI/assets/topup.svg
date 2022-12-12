@@ -1,0 +1,35 @@
+<svg width="80" height="60" viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="80" height="60" rx="16" fill="#D7D7F8"/>
+<mask id="mask0_42_129" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="80" height="60">
+<rect width="80" height="60" rx="16" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask0_42_129)">
+<mask id="mask1_42_129" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="10" y="0" width="60" height="60">
+<circle cx="40" cy="30" r="30" fill="#D7D7F8"/>
+</mask>
+<g mask="url(#mask1_42_129)">
+<circle cx="40" cy="30" r="30" fill="#D7D7F8"/>
+<mask id="mask2_42_129" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="20" y="12" width="40" height="30">
+<rect x="20" y="12.5" width="40" height="28.75" rx="6" fill="#695DE9"/>
+</mask>
+<g mask="url(#mask2_42_129)">
+<rect x="20" y="12.5" width="40" height="28.75" rx="6" fill="#695DE9"/>
+<circle cx="53" cy="19" r="10" fill="#4F46B5"/>
+</g>
+<mask id="mask3_42_129" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="20" y="12" width="40" height="30">
+<rect x="20" y="12.5" width="40" height="28.75" rx="6" fill="#695DE9"/>
+</mask>
+<g mask="url(#mask3_42_129)">
+<rect x="20" y="12.5" width="40" height="28.75" rx="6" fill="#695DE9"/>
+<circle cx="53" cy="19" r="10" fill="#4F46B5"/>
+</g>
+<circle cx="53" cy="18" r="9" fill="#2B2467"/>
+<path d="M52.511 13.0768C52.6649 12.603 53.3353 12.603 53.4892 13.0768L54.3279 15.6581C54.3968 15.87 54.5943 16.0135 54.8171 16.0135H57.5312C58.0294 16.0135 58.2366 16.651 57.8335 16.9438L55.6377 18.5392C55.4575 18.6701 55.382 18.9023 55.4509 19.1142L56.2896 21.6955C56.4436 22.1693 55.9013 22.5633 55.4982 22.2705L53.3024 20.6751C53.1221 20.5442 52.8781 20.5442 52.6978 20.6751L50.502 22.2705C50.099 22.5633 49.5566 22.1693 49.7106 21.6955L50.5493 19.1142C50.6182 18.9023 50.5428 18.6701 50.3625 18.5392L48.1667 16.9438C47.7636 16.651 47.9708 16.0135 48.469 16.0135H51.1831C51.406 16.0135 51.6034 15.87 51.6723 15.6581L52.511 13.0768Z" fill="white"/>
+<rect x="35" y="40" width="10" height="7.5" fill="#695DE9"/>
+<rect x="27.5" y="47.5" width="25" height="2.5" rx="1.25" fill="#695DE9"/>
+<path d="M42.6875 35.3125L25.5 35.3125" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M29.5 18.3125L25.5 18.3125" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36.4375 29.5L25.5 29.5" stroke="#B7B0F4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</svg>

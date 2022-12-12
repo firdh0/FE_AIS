@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="../assets/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/homepage.css"> <!-- Get navbar & footer style -->
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/detail.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Multiselect -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@kleimaj/multiselect.js@1.0.8/css/style.min.css">
+
+    <title>Detail Pembelian</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <section>
+        <nav id="navbarTransition" class="navbar navbar-expand-lg navbar-light bg-light bg-white pt-10 pb-10">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../assets/logo.png" width="60" height="60" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto text-lg gap-lg-0 gap-2">
+                        <li class="nav-item my-auto">
+                            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item my-auto">
+                            <a class="nav-link active" href="">Paket Pembelajaran</a>
+                        </li>
+                        <li class="nav-item my-auto">
+                            <a class="btn btn-sign-in d-flex justify-content-center ms-lg-2 rounded-pill"
+                                href="./src/sign-in.html" role="button">Masuk</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- Navbar -->
+
+    <!-- Detail Content -->
+    <section class="detail pt-lg-60 pb-50">
+        <div class="container-xxl container-fluid">
+            <div class="detail-header pb-50">
+                <h2 class="text-4xl fw-bold color-palette-1 text-start mb-10">Beli Paket</h2>
+                <p class="text-lg color-palette-1 mb-0">Gabung dengan kami dan bangun sebuah kompetensi</p>
+            </div>
+            <div class="row">
+                <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12">
+                    <div class="card border-0" style="border-radius: 20px;">
+                        <img src="https://images.unsplash.com/photo-1536323760109-ca8c07450053" class="card-img-top" alt="..." style="border-radius: 10px;">
+                        
+                        <div class="card-body">
+                            <span class="tag">Kelas 1 SD</span>
+                            
+                            <h5 class="card-title">ruangbelajar SMA/SMK 1 Bulan</h5>
+
+                            <h7 class="card-title">Deskripsi Paket</h7>
+                            <div class="vertical-scrollable">
+                                <div class="item d-flex">
+                                    <img src="../assets/cek.png" alt="" style="width: 23px; height:23px;">
+                                    <p class="card-text">>65rb video belajar premium dengan ADAPTO </p>
+                                </div>
+    
+                                <div class="item d-flex">
+                                    <img src="../assets/cek.png" alt="" style="width: 23px; height:23px;">
+                                    <p class="card-text">>400rb latihan soal serta pembahasan di ruanglatihan</p>
+                                </div>
+    
+                                <div class="item d-flex">
+                                    <img src="../assets/cek.png" alt="" style="width: 23px; height:23px;">
+                                    <p class="card-text">Tanya soal dan dapatkan jawaban secara instan dengan Roboguru Premium Plus</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12">
+                    <div class="card border-0" style="border-radius: 20px;">
+                        <h5 class="card-title2">Pilih Metode Pelunasan</h5>
+
+                        <select id="pelunasan" class="form-select border-1 border-secondary" aria-label="Default select example" style="height: 50px; border-radius:13px;">
+                            <option selected value="1">Pembayaran lunas</option>
+                            <option value="2">Cicilan 2x</option>
+                            <option value="3">Cicilan 3x</option>
+                        </select>
+
+                        <hr class="my-4"></hr>
+
+                        <h5 class="card-title2">Gunakan Kode Diskon</h5>
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn border border-1 border-secondary" data-bs-toggle="modal" data-bs-target="#myModal" style="padding: 0px; background-color: #FFFFFF; border-radius:13px;">
+                            <div class="item d-flex align-items-center">
+                                <img src="../assets/ic_promo1.png" alt="" style="width: 23px; height:23px; margin-right: 10px; margin-left: 10px;">
+                                <input type="text" class="border-0 inputan" id="promo" name="promo" aria-describedby="promo" placeholder="Eitss, Ada promo nih!!" style="width: 100%; height: 50px; padding-right: 5px; padding-left: 5px; border-radius:13px;">
+                            </div>
+                        </button>
+
+                        <!-- The Modal Start-->
+                        <div class="modal fade " id="myModal">
+                            <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                        
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                <h5 class="modal-title">Pilih promo tersedia</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                        
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <div class="row mt-2">
+                                        <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-7 ">
+                                            <input type="text" class="border form-control mb-4" id="inputPromo" name="promo" aria-describedby="promo" placeholder="CONTOH: JADI JUARA" style="width: 100%; height: 40px; padding-right: 10px; padding-left: 10px; border-radius:13px; border-color: #CFD3DB;">
+                                        </div>
+                                        <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-5">
+                                            <button href="#" type="button" data-dismiss="modal" onclick="onChange()" class="btn btn-modal text-center align-items-center" style="width: 100%; height: 40px; padding-right: 5px; padding-left: 5px; border-radius:13px;">Terapkan</button>
+                                        </div>
+                                    </div>
+
+                                    <hr class="my-4"></hr>
+                                    
+                                    <!-- Promo Card Start -->
+                                    <div class="mb-3" style="border-radius:13px; padding:20px; border-color: #CFD3DB; border-style: solid; border-width: 1px;">
+                                        <p class="fw-bold mb-0">MURAHDIWEB</p>
+                                        <p class="mb-0">Hemat Rp. 200.000</p>
+
+                                        <hr class="my-4" style="background-color: #CFD3DB; border-style: dashed;"></hr>
+
+                                        <div class="d-flex flex-row align-items-center text-center">
+                                            <img src="../assets/calendar.png" class="img-modal" alt="" style="width: 23px; height:23px;">
+                                            <p class="mb-0 p-2" style="margin-right: 25px;">Berlaku hingga 31/12/2023</p>
+                                            <button href="#" class="btn btn-gunakan text-center align-items-center p-2" style="width: 30%; height: 40px; padding-right: 5px; padding-left: 5px; border-radius:50px; float: left;">Terapkan</button>
+                                        </div>
+                                    </div>
+                                    <!-- Promo Card End -->
+                                    
+                                    <!-- Promo Card Start -->
+                                    <div class="mb-3" style="border-radius:13px; padding:20px; border-color: #CFD3DB; border-style: solid; border-width: 1px;">
+                                        <p class="fw-bold mb-0">MURAHDIWEB</p>
+                                        <p class="mb-0">Hemat Rp. 200.000</p>
+
+                                        <hr class="my-4" style="background-color: #CFD3DB; border-style: dashed;"></hr>
+
+                                        <div class="d-flex flex-row align-items-center text-center">
+                                            <img src="../assets/calendar.png" class="img-modal" alt="" style="width: 23px; height:23px;">
+                                            <p class="mb-0 p-2" style="margin-right: 25px;">Berlaku hingga 31/12/2023</p>
+                                            <button href="#" class="btn btn-gunakan text-center align-items-center p-2" style="width: 30%; height: 40px; padding-right: 5px; padding-left: 5px; border-radius:50px; float: left;">Terapkan</button>
+                                        </div>
+                                    </div>
+                                    <!-- Promo Card End -->
+                                    
+                                    <!-- Promo Card Start -->
+                                    <div class="mb-3" style="border-radius:13px; padding:20px; border-color: #CFD3DB; border-style: solid; border-width: 1px;">
+                                        <p class="fw-bold mb-0">MURAHDIWEB</p>
+                                        <p class="mb-0">Hemat Rp. 200.000</p>
+
+                                        <hr class="my-4" style="background-color: #CFD3DB; border-style: dashed;"></hr>
+
+                                        <div class="d-flex flex-row align-items-center text-center">
+                                            <img src="../assets/calendar.png" class="img-modal" alt="" style="width: 23px; height:23px;">
+                                            <p class="mb-0 p-2" style="margin-right: 25px;">Berlaku hingga 31/12/2023</p>
+                                            <button href="#" class="btn btn-gunakan text-center align-items-center p-2" style="width: 30%; height: 40px; padding-right: 5px; padding-left: 5px; border-radius:50px; float: left;">Terapkan</button>
+                                        </div>
+                                    </div>
+                                    <!-- Promo Card End -->
+                                    
+
+                                </div>
+                        
+                        
+                            </div>
+                            </div>
+                        </div>
+                        <!-- The Modal End -->
+
+                        <hr class="my-4"></hr>
+
+                        <div class="row">
+                            <p class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-7 justify-content-center">Total harga</p>
+                            <h6 class="card-title2 col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-5 justify-content-center fw-bold" style="text-align:right; font-size:23px; color:#E03E3D; ">Rp. 145.000</h6>    
+                        </div>
+                        <a href="./checkout.html" class="btn btn-beli">Beli</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer pt-50">
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 text-lg-start text-center">
+                        <a href="" class="mb-30">
+                            <img src="../assets/logo.png" width="60" height="60" alt="">
+                        </a>
+                        <p class="text-lg fw-semibold color-palette-1 mb-12 mt-3">Ruangguru</p>
+                        <p class="mt-30 text-lg color-palette-1 mb-30">Jl. Dr. Saharjo No.161, Manggarai Selatan, Tebet, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12860</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+
+    <!-- Multi select -->
+    <script src="https://cdn.jsdelivr.net/npm/@kleimaj/multiselect.js@1.0.8/js/multiselect.min.js"></script>
+
+    <script>
+        document.addEventListener("scroll", function () {
+            const navbar = document.querySelector(".navbar");
+            const navbarHeight = 90;
+
+            const distanceFromTop = Math.abs(
+                document.body.getBoundingClientRect().top
+            );
+
+            // console.log(distanceFromTop)
+
+            if (distanceFromTop > navbarHeight){ 
+                navbar.classList.add("fixed-top", "blur-background", "navbarTransition");
+                navbar.classList.remove("bg-light", "bg-white");
+            } else {
+                navbar.classList.add("bg-light", "bg-white");
+                navbar.classList.remove("fixed-top", "blur-background", "navbarTransition");
+            }
+        });
+
+        //METODE PELUNASAN
+        var e = document.getElementById("pelunasan");
+        function onChange() {
+            var valuePelunasan = e.value;
+
+            var valuePromo = document.getElementById("inputPromo").value.toUpperCase();
+            // var text = e.options[e.selectedIndex].text;
+            //console.log(value, text);
+            console.log(valuePelunasan);
+            console.log(valuePromo);
+        }
+        e.onchange = onChange;
+        onChange();
+
+    </script>
+
+
+</body>
+
+</html>

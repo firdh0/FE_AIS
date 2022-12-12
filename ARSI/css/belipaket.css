@@ -1,0 +1,145 @@
+body{
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+.slider {
+    overflow-x: scroll;
+    white-space: nowrap;
+    gap: 32px;
+    width: auto;
+    height: auto;
+    overflow-x: auto;
+    padding-bottom: 32px;
+    padding-top: 32px;
+}
+
+.slider::-webkit-scrollbar {
+    width: 30px;
+}
+
+.slider::-webkit-scrollbar {
+    height: 8px;
+    margin: 100px;
+}
+
+.slider::-webkit-scrollbar-track {
+    background: #F9FAFF;
+    border-radius: 50rem;
+}
+
+.slider::-webkit-scrollbar-thumb {
+    background: #BFBFBF;
+    border-radius: 50rem;
+}
+
+.slider::-webkit-scrollbar-thumb:hover {
+    background: #FFBA69;
+} 
+
+.itemKategori{
+    margin: 0px !important;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 12px;
+    height: 200px;
+
+    object-fit: cover;
+}
+
+.card {
+    background-color: #FFFFFF;
+    padding: 30px;
+    margin-right: 0px;
+    margin-left: 0px;
+
+    border-radius: 15px;
+    outline: none !important;
+    margin-bottom: 25px;
+}
+
+.tag {
+    padding: 4px 8px;
+    border: 1px solid #E5EAED;
+
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #788697;
+}
+
+.card-body {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.card-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.vertical-scrollable{
+    padding-right: 20px;
+    margin-top: 25px;
+    height: 150px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+}
+
+.vertical-scrollable::-webkit-scrollbar {
+    width: 5px;
+}
+
+.vertical-scrollable::-webkit-scrollbar {
+    height: 8px;
+    margin: 100px;
+}
+
+.vertical-scrollable::-webkit-scrollbar-track {
+    background: #F9FAFF;
+    border-radius: 50rem;
+}
+
+.vertical-scrollable::-webkit-scrollbar-thumb {
+    background: #BFBFBF;
+    border-radius: 50rem;
+}
+
+.vertical-scrollable::-webkit-scrollbar-thumb:hover {
+    background: #FFBA69;
+} 
+
+.vertical-scrollable .item{
+    margin-bottom: 10px;
+}
+
+.vertical-scrollable .item img{
+    float: left;
+    margin-right: 20px;
+}
+
+.card-body .card-harga{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #E03E3D;
+    font-size: 30px;
+}
+
+.card-body .btn{
+    border-radius: 48px;
+    background-color:  #FFBA69;
+    margin-bottom: 10px;
+    width: 100%;
+    outline: none !important;
+    color: black;
+}
+
+.card-body .btn:hover{
+    background-color: #FFA43C;
+    color: black;
+}
+

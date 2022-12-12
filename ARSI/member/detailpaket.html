@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="icon" type="image/x-icon" href="../assets/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/utilities.css" />
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/transactions.css" />
+    <link rel="stylesheet" href="../css/detailpaket.css" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+
+    <title>Detail Paket</title>
+</head>
+
+<body>
+    <div id="loading-effect" class="position-absolute w-100 vh-100">
+        <div class="position-absolute top-50 start-50">
+            <div class="loader" role="status"></div>
+        </div>
+    </div>
+    <!-- Transactions -->
+    <section class="transactions overflow-auto">
+        <section class="sidebar">
+            <div class="content pt-50 pb-30 ps-30">
+                <div class="user text-center pb-50 pe-30">
+                    <img src="../assets/img/avatar-1.png" width="90" height="90" class="img-fluid mb-20" />
+                    <h2 id="user-nama" class="fw-bold text-xl color-palette-1 m-0"></h2>
+                    <p id="user-email" class="color-palette-2 m-0"></p>
+                </div>
+                <div class="menus">
+                    <div class="item mb-30">
+                        <svg class="icon me-3" width="25" height="25" viewBox="0 0 25 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.90332 2.41406L3.90332 6.41406V20.4141C3.90332 20.9445 4.11403 21.4532 4.48911 21.8283C4.86418 22.2033 5.37289 22.4141 5.90332 22.4141H19.9033C20.4338 22.4141 20.9425 22.2033 21.3175 21.8283C21.6926 21.4532 21.9033 20.9445 21.9033 20.4141V6.41406L18.9033 2.41406H6.90332Z"
+                                stroke="#7E8CAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M16.9033 10.4141C16.9033 11.4749 16.4819 12.4923 15.7317 13.2425C14.9816 13.9926 13.9642 14.4141 12.9033 14.4141C11.8425 14.4141 10.825 13.9926 10.0749 13.2425C9.32475 12.4923 8.90332 11.4749 8.90332 10.4141"
+                                stroke="#7E8CAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3.90332 6.41406H21.9033" stroke="#7E8CAC" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <p class="item-title m-0">
+                            <a href="./riwayat.html" class="text-lg text-decoration-none">Riwayat Pembelian</a>
+                        </p>
+                    </div>
+                    <div class="item mb-30">
+                        <svg class="icon me-3" width="25" height="25" viewBox="0 0 25 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                                <path
+                                    d="M12.9033 15.4141C16.7693 15.4141 19.9033 12.2801 19.9033 8.41406C19.9033 4.54807 16.7693 1.41406 12.9033 1.41406C9.03733 1.41406 5.90332 4.54807 5.90332 8.41406C5.90332 12.2801 9.03733 15.4141 12.9033 15.4141Z"
+                                    stroke="#7E8CAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M9.11332 14.3039L7.90332 23.4139L12.9033 20.4139L17.9033 23.4139L16.6933 14.2939"
+                                    stroke="#7E8CAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0">
+                                    <rect width="24" height="24" fill="white" transform="translate(0.90332 0.414062)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <p class="item-title m-0">
+                            <a href="" class="text-lg text-decoration-none">Paket Saya</a>
+                        </p>
+                    </div>
+                    <div class="item active mb-30">
+                        <svg class="icon me-3" width="25" height="25" viewBox="0 0 25 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                                <path
+                                    d="M12.9033 15.4141C16.7693 15.4141 19.9033 12.2801 19.9033 8.41406C19.9033 4.54807 16.7693 1.41406 12.9033 1.41406C9.03733 1.41406 5.90332 4.54807 5.90332 8.41406C5.90332 12.2801 9.03733 15.4141 12.9033 15.4141Z"
+                                    stroke="#7E8CAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M9.11332 14.3039L7.90332 23.4139L12.9033 20.4139L17.9033 23.4139L16.6933 14.2939"
+                                    stroke="#7E8CAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0">
+                                    <rect width="24" height="24" fill="white" transform="translate(0.90332 0.414062)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <p class="item-title m-0">
+                            <a href="./belipaket.html" class="text-lg text-decoration-none">Beli Paket</a>
+                        </p>
+                    </div>
+                    <div class="item mb-30">
+                        <svg class="icon me-3" width="25" height="25" viewBox="0 0 25 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19.2634 7.05396C20.5218 8.31274 21.3787 9.9164 21.7257 11.6621C22.0728 13.4079 21.8944 15.2173 21.2131 16.8617C20.5318 18.5061 19.3782 19.9115 17.8983 20.9003C16.4183 21.8891 14.6783 22.4169 12.8984 22.4169C11.1185 22.4169 9.37859 21.8891 7.89861 20.9003C6.41864 19.9115 5.26508 18.5061 4.58381 16.8617C3.90253 15.2173 3.72413 13.4079 4.07116 11.6621C4.41819 9.9164 5.27506 8.31274 6.53344 7.05396"
+                                stroke="#7E8CAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12.9033 2.41406V12.4141" stroke="#7E8CAC" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <p class="item-title m-0">
+                            <a id="keluar-button" href="../index.html" class="text-lg text-decoration-none">Log Out</a>
+                        </p>
+                    </div>
+                    <div class="sidebar-footer pt-73 pe-30">
+                        <div class="footer-card">
+                            <div class="d-flex justify-content-between mb-20">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="50"
+                                        height="50">
+                                        <circle cx="25" cy="25" r="25" fill="#D7D7F8" />
+                                    </mask>
+                                    <g mask="url(#mask0)">
+                                        <circle cx="25" cy="25" r="25" fill="#D7D7F8" />
+                                        <rect x="8.125" y="15.625" width="33.75" height="38.125" rx="10" fill="#695DE9" />
+                                        <path d="M31.25 28.75L31.25 42.5" stroke="white" stroke-width="2.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M25 33.75L25 42.5" stroke="#B7B0F4" stroke-width="2.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M18.75 37.5L18.75 42.5" stroke="#B7B0F4" stroke-width="2.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <circle cx="25" cy="16.25" r="8.75" fill="#2B2467" />
+                                        <path
+                                            d="M24.4056 11.8294C24.5927 11.2536 25.4073 11.2536 25.5944 11.8294L26.2629 13.8868C26.3466 14.1443 26.5865 14.3186 26.8573 14.3186H29.0206C29.626 14.3186 29.8777 15.0934 29.3879 15.4493L27.6378 16.7208C27.4188 16.88 27.3271 17.1621 27.4108 17.4196L28.0792 19.477C28.2663 20.0528 27.6073 20.5316 27.1175 20.1757L25.3674 18.9042C25.1483 18.745 24.8517 18.745 24.6326 18.9042L22.8825 20.1757C22.3927 20.5316 21.7337 20.0528 21.9208 19.4769L22.5892 17.4196C22.6729 17.1621 22.5812 16.88 22.3622 16.7208L20.6121 15.4493C20.1223 15.0934 20.374 14.3186 20.9794 14.3186H23.1427C23.4135 14.3186 23.6534 14.1443 23.7371 13.8868L24.4056 11.8294Z"
+                                            fill="white" />
+                                    </g>
+                                </svg>
+                                <p class="fw-medium color-palette-1">Jangan lupa<br>
+                                    Berlangganan</p>
+                            </div>
+                            <a class="btn btn-get-started w-100 fw-medium text-xs text-center text-white rounded-pill"
+                                href="../src/paket.html" role="button">Beli Paket</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <main class="main-wrapper">
+            <div class="ps-lg-0">
+                <h2 class="text-4xl fw-bold color-palette-1 mb-30">Paket Pembelajaran</h2>
+                <div class="row">
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12" id="list_item">
+                        <!-- <div id="cardItem" class="card border-0" style="border-radius: 20px;">
+                            <img src="https://images.unsplash.com/photo-1536323760109-ca8c07450053" class="card-img-top" alt="..." style="border-radius: 10px;">
+                            
+                            <div class="card-body">
+                                <span class="tag">Kelas 1 SD</span>
+                                
+                                <h5 class="card-title">ruangbelajar SMA/SMK 1 Bulan</h5>
+    
+                                <h7 class="card-title">Deskripsi Paket</h7>
+                                <div class="vertical-scrollable">
+                                    <div class="item d-flex">
+                                        <img src="../assets/cek.png" alt="" style="width: 23px; height:23px;">
+                                        <p class="card-text">>65rb video belajar premium dengan ADAPTO </p>
+                                    </div>
+        
+                                    <div class="item d-flex">
+                                        <img src="../assets/cek.png" alt="" style="width: 23px; height:23px;">
+                                        <p class="card-text">>400rb latihan soal serta pembahasan di ruanglatihan</p>
+                                    </div>
+        
+                                    <div class="item d-flex">
+                                        <img src="../assets/cek.png" alt="" style="width: 23px; height:23px;">
+                                        <p class="card-text">Tanya soal dan dapatkan jawaban secara instan dengan Roboguru Premium Plus</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="card border-0" style="border-radius: 20px;">
+    
+                            <h5 class="card-title2">Gunakan Kode Diskon</h5>
+    
+                            <!-- Button trigger modal -->
+                            <button id="btn-color" type="button" class="btn border border-1 border-secondary colorButtonBefore" data-bs-toggle="modal" data-bs-target="#myModal" style="padding: 0px; border-radius:13px; width: 100%;">
+                                <div class="item d-flex align-items-center">
+                                    <img id="imgDiskon" src="../assets/ic_promo1.png" alt="" style="width: 23px; height:23px; margin-right: 10px; margin-left: 15px;">
+                                    <input type="text" class="border-0 inputan" id="promo" name="promo" aria-describedby="promo" placeholder="Eitss, Ada promo nih!!" style="width: 100%; height: 50px; padding-right: 5px; padding-left: 5px; border-radius:13px;">
+                                </div>
+                            </button>
+    
+                            <!-- The Modal Start-->
+                            <div class="modal fade " id="myModal">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                
+                                        <!-- Modal Header -->
+                                        <div class="modal-header">
+                                        <h5 class="modal-title">Pilih promo tersedia</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                
+                                        <!-- Modal body -->
+                                        <div class="modal-body">
+                                            <div class="row mt-2">
+                                                <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-7 ">
+                                                    <input id="inputKode" type="text" class="border form-control mb-4" id="inputPromo" name="promo" aria-describedby="promo" placeholder="CONTOH: JADI JUARA" style="width: 100%; height: 40px; padding-right: 10px; padding-left: 10px; border-radius:13px; border-color: #CFD3DB;">
+                                                </div>
+                                                <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-5">
+                                                    <button id="terapkan" type="button" class="btn btn-modal btn-secondary text-center align-items-center" style="width: 100%; height: 40px; padding-right: 5px; padding-left: 5px; border-radius:13px;" data-bs-dismiss="modal">Terapkan</button>
+                                                </div>
+                                            </div>
+
+                                            <hr class="my-4"></hr>
+                                            
+                                            <div id="list_status_item">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- The Modal End -->
+    
+                            <hr class="my-4"></hr>
+    
+                            <div class="row">
+                                <p class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-7 justify-content-center">Total harga</p>
+                                <h6 id="totalHarga" class="card-title2 col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-5 justify-content-center fw-bold" style="text-align:right; font-size:23px; color:#E03E3D; "></h6>    
+                            </div>
+                            <a id="beliPaket" href="" class="btn btn-beli" style="width: 100%;">Beli</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <!-- Error Toast -->
+    <div id="toast-container" class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+    
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="../js/script.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".btn-status").click(function () {
+                $(this).addClass("btn-active");
+                $(".btn-status").not(this).removeClass("btn-active");
+            });
+
+
+            $('#list_status_title a').click(function (event) {
+                var filter = $(event.target).attr('data-filter');
+                $('#list_status_item #itemCard').each(function () {
+                    var item = $(this);
+                    console.log(item.attr('data-category').indexOf(filter) != -1);
+
+                    if (filter == '*' || (item.attr('data-category').indexOf(filter) != -1))
+                        item.show();
+                    else
+                        item.hide();
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if(getCookie('token') == "")
+                window.location.href = "../src/sign-in.html";
+        });
+    
+        document.getElementById('keluar-button').addEventListener('click', () =>{
+            setCookie('token', '', 0)
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            reqHeader['Authorization'] = `Bearer ${getCookie('token')}`
+            sendGetRequest('/profile', (response) => {
+                document.getElementById('user-nama').innerText = response.data.nama
+                document.getElementById('user-email').innerText = response.data.email
+            });
+        });
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const indexPaket = urlParams.get('indexPaket')
+        const indexDiskon = urlParams.get('indexDiskon')
+        let responseDiskon = '0'
+
+        document.addEventListener('DOMContentLoaded', () => {
+            reqHeader['Authorization'] = `Bearer ${getCookie('token')}`
+
+            sendGetRequest('/paket-pembelajaran', (response) => {
+
+                document.getElementById('list_item').innerHTML = ''
+                let responseIndex= response.data[indexPaket]
+                document.getElementById('list_item').appendChild(paketPembelajaranCard(responseIndex.kelas, responseIndex.nama_paket, responseIndex.deskripsi_paket));
+
+                sendGetRequest('/diskon', (response) => {
+                    responseDiskon = response.data
+                    let indexDiskon = response.data.length-1;
+                    document.getElementById('list_status_item').innerHTML = ''
+                    for (const data of response.data.reverse()) {
+                        document.getElementById('list_status_item').appendChild(diskonCard(data.kode_diskon, data.harga_diskon, data.tanggal_berakhir, responseIndex.harga, indexPaket, indexDiskon))
+                        indexDiskon--;
+                    }
+
+                    pembelian(responseIndex.harga, responseIndex.id_paket, indexPaket, indexDiskon)
+                })
+            });
+
+
+        });
+
+        function paketPembelajaranCard(kelas, nama_paket, deskripsi_paket){
+
+            const array = [
+                "Kelas 1 SD",
+                "Kelas 2 SD",
+                "Kelas 3 SD",
+                "Kelas 4 SD",
+                "Kelas 5 SD",
+                "Kelas 6 SD",
+                "Kelas 1 SMP",
+                "Kelas 2 SMP",
+                "Kelas 3 SMP",
+                "Kelas 1 SMA",
+                "Kelas 2 SMA",
+                "Kelas 3 SMA",
+                "UTBK"
+            ]
+
+            const _array = [
+                "Kelas_1_SD",
+                "Kelas_2_SD",
+                "Kelas_3_SD",
+                "Kelas_4_SD",
+                "Kelas_5_SD",
+                "Kelas_6_SD",
+                "Kelas_1_SMP",
+                "Kelas_2_SMP",
+                "Kelas_3_SMP",
+                "Kelas_1_SMA",
+                "Kelas_2_SMA",
+                "Kelas_3_SMA",
+                "UTBK"
+            ]
+
+            //<div id="cardItem" class="card border-0" style="border-radius: 20px;">
+            const node = document.createElement("div");
+            node.className += 'card border-0';
+            node.setAttribute("style", "border-radius: 20px;");
+
+            let eachDeskripsi = ''
+            const loopDeskripsi = (deskripsi_paket) => {
+                for (let deskripsi of deskripsi_paket){
+                    eachDeskripsi += `
+                        <div class="item d-flex">
+                            <img src="../assets/cek.png" alt="" style="width: 23px; height:23px;">
+                            <p class="card-text">${deskripsi}</p>
+                        </div>
+                    `;
+                }
+                return eachDeskripsi;
+            }
+
+            node.innerHTML = `
+                <img src="https://images.unsplash.com/photo-1536323760109-ca8c07450053" class="card-img-top" alt="..." style="border-radius: 10px;">
+                
+                <div class="card-body">
+                    <span class="tag">${array[kelas-1]}</span>
+                    
+                    <h5 class="card-title">${nama_paket}</h5>
+
+                    <div class="vertical-scrollable" id="itemDeskripsi">
+                        ${loopDeskripsi(deskripsi_paket)}
+                    </div>
+                </div>
+            `
+
+            return node
+        }
+
+        // document.addEventListener('DOMContentLoaded', () => {
+        //     reqHeader['Authorization'] = `Bearer ${getCookie('token')}`
+        //     sendGetRequest('/diskon', (response) => {
+
+        //         document.getElementById('list_status_item').innerHTML = ''
+        //         for (const data of response.data.reverse()) {
+        //             document.getElementById('list_status_item').appendChild(diskonCard(data.kode_diskon, data.harga_diskon, data.tanggal_berakhir))
+
+        //             document.getElementById('terapkan').addEventListener('click', () =>{
+        //                 let kode = document.getElementById('inputKode').value.toUpperCase();
+                        
+        //                 let buttonColor = document.getElementById('btn-color')
+        //                 let promoColor = document.getElementById('promo')
+        //                 let imgDiskon = document.getElementById('imgDiskon')
+        //                 if(kode != ''){
+        //                     document.getElementById('promo').placeholder = kode 
+        //                     buttonColor.classList.remove("colorButtonBefore");
+        //                     buttonColor.classList.add("colorButtonAfter");
+        //                     promoColor.classList.remove("colorButtonBefore");
+        //                     promoColor.classList.add("colorButtonAfter");
+        //                     imgDiskon.src = "../assets/cek.png"
+        //                 }else{
+        //                     document.getElementById('promo').placeholder = "Eitss, Ada promo nih!!"
+        //                     buttonColor.classList.remove("colorButtonAfter");
+        //                     buttonColor.classList.add("colorButtonBefore");
+        //                     promoColor.classList.remove("colorButtonAfter");
+        //                     promoColor.classList.add("colorButtonBefore");
+        //                     imgDiskon.src = "../assets/ic_promo1.png"
+        //                 }
+        //             });
+        //         }
+        //     });
+        // });
+
+        function addTitik(harga, index){
+            if(index >= 4){
+                return addTitik(harga.toString().substring(0, index-3) + "." + harga.toString().substring(index-3, harga.length), index-3);
+            }else{
+                return harga;
+            }
+        }
+        
+        let diskons = [];
+
+        function diskonCard(kode_diskon, harga_diskon, tanggal_berakhir, hargaPaket, indexPaket, indexDiskon){
+
+            let _array = {
+                kode_diskon : kode_diskon,
+                harga_diskon: harga_diskon
+            }
+
+            diskons.push(_array);
+            
+            
+            const node = document.createElement("div");
+            node.className = 'mb-3';
+            node.setAttribute("style", 'border-radius:13px; padding:20px; border-color: #CFD3DB; border-style: solid; border-width: 1px;');
+            
+            harga_diskon = harga_diskon.toString();
+            let resultHarga = "Rp " + addTitik(harga_diskon, harga_diskon.length);
+            
+            node.innerHTML = `
+            <p class="fw-bold mb-0">${kode_diskon}</p>
+            <p class="mb-0">Hemat ${resultHarga}</p>
+
+                <hr class="my-4" style="background-color: #CFD3DB; border-style: dashed;"></hr>
+
+                <div class="d-flex flex-row align-items-center text-center">
+                    <img src="../assets/calendar.png" class="img-modal" alt="" style="width: 23px; height:23px;">
+                    <p class="mb-0 p-2" style="margin-right: 25px;">Berlaku hingga ${tanggal_berakhir}</p>
+                </div>
+            `
+            return node
+        }
+
+        let buttonColor = document.getElementById('btn-color')
+        let promoColor = document.getElementById('promo')
+        let imgDiskon = document.getElementById('imgDiskon')
+        let _hargaDiskon, _totalHarga, kodeDiskon, resultHargaPaket
+
+        function pembelian(hargaPaket, idPaket, indexPaket, indexDiskon){
+            
+            document.getElementById('terapkan').addEventListener('click', () =>{
+                
+                let kode = document.getElementById('inputKode').value.toUpperCase();
+                const diskonDipilih = diskons.find(diskon => diskon.kode_diskon === kode);
+                
+                if(kode != ''){
+                    document.getElementById('promo').value = kode 
+                    buttonColor.classList.remove("colorButtonBefore");
+                    buttonColor.classList.add("colorButtonAfter");
+                    promoColor.classList.remove("colorButtonBefore");
+                    promoColor.classList.add("colorButtonAfter");
+                    imgDiskon.src = "../assets/cek.png"    
+                    
+                    _hargaDiskon = diskonDipilih.harga_diskon.toString()
+                    _totalHarga = (hargaPaket.toString() - _hargaDiskon).toString();
+                    kodeDiskon = diskonDipilih.kode_diskon
+
+
+                    function addTitik(harga, index){
+                        if(index >= 4){
+                            return addTitik(harga.toString().substring(0, index-3) + "." + harga.toString().substring(index-3, harga.length), index-3);
+                        }else{
+                            return harga;
+                        }
+                    }
+                    
+                    resultHargaPaket =  "Rp " + addTitik(_totalHarga, _totalHarga.length);
+                    document.getElementById('totalHarga').innerHTML = resultHargaPaket //INI HARGA FINAL
+
+                    // document.getElementById('beliPaket').addEventListener('click', () =>{
+                    //     requestPembelian(idPaket, kodeDiskon);
+                    //     console.log('ini' + kodeDiskon)
+                    // });
+                    
+                    // document.getElementById('beliPaket').addEventListener('click', () =>{
+                    //     setCookie('token', '', 0)
+                    // });
+
+                    //document.getElementById('beliPaket').href = `./checkout.html?indexPaket=${indexPaket}&kodeDiskon=${kodeDiskon}&tokenEwallet=0`
+                }else{
+                    document.getElementById('promo').placeholder = "Eitss, Ada promo nih!!"
+                    document.getElementById('promo').value = ''
+                    buttonColor.classList.remove("colorButtonAfter");
+                    buttonColor.classList.add("colorButtonBefore");
+                    promoColor.classList.remove("colorButtonAfter");
+                    promoColor.classList.add("colorButtonBefore");
+                    imgDiskon.src = "../assets/ic_promo1.png"
+
+                    function addTitik(harga, index){
+                        if(index >= 4){
+                            return addTitik(harga.toString().substring(0, index-3) + "." + harga.toString().substring(index-3, harga.length), index-3);
+                        }else{
+                            return harga;
+                        }
+                    }
+
+                    harga_paket = hargaPaket.toString();
+                    resultHargaPaket =  "Rp " + addTitik(harga_paket, harga_paket.length);
+                    document.getElementById('totalHarga').innerHTML = resultHargaPaket
+                }
+            });
+            
+            
+            harga_paket = hargaPaket.toString();
+            resultHargaPaket =  "Rp " + addTitik(harga_paket, harga_paket.length);
+            document.getElementById('totalHarga').innerHTML = resultHargaPaket
+
+            
+            document.getElementById('beliPaket').addEventListener('click', (event) =>{
+                kodeDiskon = document.getElementById('promo').value
+                requestPembelian(idPaket, kodeDiskon);
+                event.preventDefault()
+            });
+
+           
+            
+            //document.getElementById('beliPaket').href = `./checkout.html?indexPaket=${indexPaket}&kodeDiskon=0&tokenEwallet=0`
+            
+        }
+
+        function requestPembelian(id_paket, kode_diskon=''){
+            // console.log(kode_diskon === '')   
+            let dataBeli
+            if(kode_diskon != ''){
+                dataBeli= {
+                    id_paket : id_paket,
+                    kode_diskon : kode_diskon
+                }
+            }else{
+                dataBeli= {
+                    id_paket : id_paket
+                }
+            }
+
+            
+            reqHeader['Content-type'] = 'application/x-www-form-urlencoded'
+            sendPostRequest('/pembelian', dataBeli, (response) => {
+                let id_pembelian = response.data.id_pembelian
+                console.log(dataBeli)
+                document.getElementById('loading-effect').style.display = '';
+                window.location.href = `./checkout.html?indexPaket=${indexPaket}&kodeDiskon=${kode_diskon}&id_pembelian=${id_pembelian}&tokenEwallet=0`
+            });
+        }
+        
+        
+            
+        
+    </script>
+
+</body>
+
+</html>

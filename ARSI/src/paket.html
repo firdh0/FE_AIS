@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="../assets/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/paket.css" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <title>Ruangguru</title>
+</head>
+
+<body>
+    <div id="loading-effect" class="position-absolute w-100 vh-100">
+        <div class="position-absolute top-50 start-50">
+            <div class="loader" role="status"></div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <section>
+        <nav id="navbarTransition" class="navbar navbar-expand-lg navbar-light bg-light bg-white pt-10 pb-10">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../assets/logo.png" width="60" height="60" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto text-lg gap-lg-0 gap-2">
+                        <li class="nav-item my-auto">
+                            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item my-auto">
+                            <a class="nav-link active" href="">Paket Pembelajaran</a>
+                        </li>
+                        <li class="nav-item my-auto">
+                            <a class="btn btn-sign-in d-flex justify-content-center ms-lg-2 rounded-pill"
+                                href="../src/sign-in.html" role="button">Masuk</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- Navbar -->
+
+    <section class="paket overflow-auto header pt-lg-60 pb-10">
+        <div class="container-xxl container-fluid">
+            <div class="row gap-lg-0 gap-5 justify-content-center">
+                <main class="main-wrapper">
+                    <div class="ps-lg-0">
+                        <h2 class="text-4xl fw-bold color-palette-1 mb-10">Paket Pembelajaran</h2>
+                        <div class="row mb-20">
+                            <div class="col-lg-12 col-12 main-content">
+                                <div id="list_status_title" class="slider">
+                                    <a data-filter="*" href="#" class="btn btn-status rounded-pill text-sm btn-active me-3">Semua</a>
+                                    <a data-filter="Kelas 1 SD" href="#" class="btn btn-status rounded-pill text-sm me-3">1 SD</a>
+                                    <a data-filter="Kelas 2 SD" href="#" class="btn btn-status rounded-pill text-sm me-3">2 SD</a>
+                                    <a data-filter="Kelas 3 SD" href="#" class="btn btn-status rounded-pill text-sm me-3">3 SD</a>
+                                    <a data-filter="Kelas 4 SD" href="#" class="btn btn-status rounded-pill text-sm me-3">4 SD</a>
+                                    <a data-filter="Kelas 5 SD" href="#" class="btn btn-status rounded-pill text-sm me-3">5 SD</a>
+                                    <a data-filter="Kelas 6 SD" href="#" class="btn btn-status rounded-pill text-sm me-3">6 SD</a>
+                                    <a data-filter="Kelas 1 SMP" href="#" class="btn btn-status rounded-pill text-sm me-3">1 SMP</a>
+                                    <a data-filter="Kelas 2 SMP" href="#" class="btn btn-status rounded-pill text-sm me-3">2 SMP</a>
+                                    <a data-filter="Kelas 3 SMP" href="#" class="btn btn-status rounded-pill text-sm me-3">3 SMP</a>
+                                    <a data-filter="Kelas 1 SMA" href="#" class="btn btn-status rounded-pill text-sm me-3">1 SMA</a>
+                                    <a data-filter="Kelas 2 SMA" href="#" class="btn btn-status rounded-pill text-sm me-3">2 SMA</a>
+                                    <a data-filter="Kelas 3 SMA" href="#" class="btn btn-status rounded-pill text-sm me-3">3 SMA</a>
+                                    <a data-filter="UTBK" href="#" class="btn btn-status rounded-pill text-sm me-3">UTBK</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 Column - Feature -->
+    <section class="container-fluid">
+        <div class="row gap-lg-0 gap-4" data-aos="fade-up" id="list_status_item">
+            <!-- Card Start -->
+            <!-- <div class="col-lg-4" data-category="Kelas 1 SD" id="itemCard">
+                <div class="card border-0" style="border-radius: 20px;">
+                    <img src="https://images.unsplash.com/photo-1536323760109-ca8c07450053" class="card-img-top" alt="..." style="border-radius: 10px;">
+                    
+                    <div class="card-body">
+                        <span class="tag">Kelas 1 SD</span>
+                        
+                        <h5 class="card-title">ruangbelajar SMA/SMK 1 Bulan</h5>
+
+                        <div class="vertical-scrollable">
+                            <div class="item d-flex">
+                                <img src="../assets/cek.png" alt="" style="width: 23px; height:23px;">
+                                <p class="card-text">>65rb video belajar premium dengan ADAPTO </p>
+                            </div>
+
+                            <div class="item d-flex">
+                                <img src="../assets/cek.png" alt="" style="width: 23px; height:23px;">
+                                <p class="card-text">>400rb latihan soal serta pembahasan di ruanglatihan</p>
+                            </div>
+
+                            <div class="item d-flex">
+                                <img src="../assets/cek.png" alt="" style="width: 23px; height:23px;">
+                                <p class="card-text">Tanya soal dan dapatkan jawaban secara instan dengan Roboguru Premium Plus</p>
+                            </div>
+                        </div>
+
+                        <hr class="my-4"></hr>
+                        <h5 class="card-harga fw-semibold">Rp. 145.000</h5>
+                        <a href="./detail.html" class="btn">Beli</a>
+                    </div>
+                </div>
+            </div> -->
+            <!-- Card End -->            
+        </div>
+    </section>
+
+    <!-- Error Toast -->
+    <div id="toast-container" class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+    
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+
+    <!-- AOS Animation -->
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="../js/script.js"></script>
+    <script>
+        document.addEventListener("scroll", function () {
+            const navbar = document.querySelector(".navbar");
+            const navbarHeight = 90;
+
+            const distanceFromTop = Math.abs(
+                document.body.getBoundingClientRect().top
+            );
+
+            console.log(distanceFromTop)
+
+            if (distanceFromTop > navbarHeight){ 
+                navbar.classList.add("fixed-top", "blur-background", "navbarTransition");
+                navbar.classList.remove("bg-light", "bg-white");
+            } else {
+                navbar.classList.add("bg-light", "bg-white");
+                navbar.classList.remove("fixed-top", "blur-background", "navbarTransition");
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            //reqHeader['Authorization'] = `Bearer ${getCookie('token')}`
+            sendGetRequest('/paket-pembelajaran', (response) => {
+                document.getElementById('list_status_item').innerHTML = ''
+                let index = 0;
+                for (const data of response.data.reverse()) {
+                    console.log(data)
+                    document.getElementById('list_status_item').appendChild(paketPembelajaranCard(data.kelas, data.nama_paket, data.deskripsi_paket, data.harga, data.masa_aktif_hingga, index))
+                    index++;
+                }
+            });
+        });
+
+        function paketPembelajaranCard(kelas, nama_paket, deskripsi_paket, harga, masa_aktif_hingga){
+            
+            const array = [
+                "Kelas 1 SD",
+                "Kelas 2 SD",
+                "Kelas 3 SD",
+                "Kelas 4 SD",
+                "Kelas 5 SD",
+                "Kelas 6 SD",
+                "Kelas 1 SMP",
+                "Kelas 2 SMP",
+                "Kelas 3 SMP",
+                "Kelas 1 SMA",
+                "Kelas 2 SMA",
+                "Kelas 3 SMA",
+                "UTBK"
+            ]
+
+            const node = document.createElement("div");
+            // node.className += " col-lg-4 "
+            // node.setAttribute("data-category", array[kelas-1]);
+
+            node.innerHTML = `
+                <!-- Card Start -->
+                <div class="col-lg-4" data-category="${array[kelas-1]}" style="margin-right: 0px;">
+                    <div class="card border-0" style="border-radius: 20px;">
+                        <img src="https://images.unsplash.com/photo-1536323760109-ca8c07450053" class="card-img-top" alt="..." style="border-radius: 10px;">
+                        
+                        <div class="card-body">
+                            <span class="tag">${array[kelas-1]}</span>
+                            
+                            <h5 class="card-title">${nama_paket}</h5>
+
+                            <div id="deskripsiPaket" class="vertical-scrollable">
+                                <div class="item d-flex">
+                                    <img src="../assets/cek.png" alt="" style="width: 23px; height:23px;">
+                                    <p class="card-text">${deskripsi_paket[0]}</p>
+                                </div>
+                                <div class="item d-flex">
+                                    <img src="../assets/cek.png" alt="" style="width: 23px; height:23px;">
+                                    <p class="card-text">${deskripsi_paket[1]}</p>
+                                </div>
+                                <div class="item d-flex">
+                                    <img src="../assets/cek.png" alt="" style="width: 23px; height:23px;">
+                                    <p class="card-text">${deskripsi_paket[2]}</p>
+                                </div>
+                            </div>
+
+                            <hr class="my-4"></hr>
+                            <h5 class="card-harga fw-semibold">${harga}</h5>
+                            <a href="./detail.html" class="btn">Beli</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card End -->
+            `
+            return node
+        }
+
+        $(document).ready(function () {
+            $(".btn-status").click(function () {
+                $(this).addClass("btn-active");
+                $(".btn-status").not(this).removeClass("btn-active");
+            });
+
+
+            $('#list_status_title a').click(function (event) {
+                var filter = $(event.target).attr('data-filter');
+                $('#list_status_item #itemCard').each(function () {
+                    var item = $(this);
+                    console.log(item.attr('data-category').indexOf(filter) != -1);
+
+                    if (filter == '*' || (item.attr('data-category').indexOf(filter) != -1))
+                        item.show();
+                    else
+                        item.hide();
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

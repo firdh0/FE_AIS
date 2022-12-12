@@ -1,0 +1,126 @@
+/* Sign-in */
+
+
+.loader {
+    animation: rotate 1s infinite;
+    height: 50px;
+    width: 50px;
+}
+
+.loader:before,
+.loader:after {
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+}
+.loader:before {
+    animation: ball1 1s infinite;
+    background-color: #FFC0B7;
+    box-shadow: 30px 0 0 #FFBA69;
+    margin-bottom: 10px;
+}
+.loader:after {
+    animation: ball2 1s infinite;
+    background-color: #39D98A;
+    box-shadow: 30px 0 0 #6C4FF4;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg) scale(0.8) }
+    50% { transform: rotate(360deg) scale(1.2) }
+    100% { transform: rotate(720deg) scale(0.8) }
+}
+
+@keyframes ball1 {
+    0% {
+        box-shadow: 30px 0 0 #FFBA69;
+    }
+    50% {
+        box-shadow: 0 0 0 #FFBA69;
+        margin-bottom: 0;
+        transform: translate(15px, 15px);
+    }
+    100% {
+        box-shadow: 30px 0 0 #FFBA69;
+        margin-bottom: 10px;
+    }
+}
+
+@keyframes ball2 {
+    0% {
+        box-shadow: 30px 0 0 #6C4FF4;
+    }
+    50% {
+        box-shadow: 0 0 0 #6C4FF4;
+        margin-top: -20px;
+        transform: translate(15px, 15px);
+    }
+    100% {
+        box-shadow: 30px 0 0 #6C4FF4;
+        margin-top: 0;
+    }
+}
+
+
+#loading-effect{
+    display: none;
+    backdrop-filter: blur(20px);
+    z-index: 10;
+}
+
+#loading-effect > div {
+    transform: translate(-50%, -50%);
+}  
+
+.sign-in .img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+
+.sign-in .bg-blue{
+    background: linear-gradient(30deg, rgba(42,13,172,1) 0%, rgba(108,79,244,1) 100%);
+}
+
+.sign-in input[type="password"],
+.sign-in input[type="email"]{
+    border: 1px solid #0C145A;
+    padding: 0.75rem 1.625rem;
+    color: #0C145A;
+}
+
+.sign-in input[type="password"]:focus-within,
+.sign-in input[type="email"]:focus-within{
+    color: #0C145A;
+}
+
+.sign-in input[type="password"]::placeholder,
+.sign-in input[type="email"]::placeholder{
+    color: #CCD0DD;
+}
+
+.sign-in .btn-sign-in{
+    padding: 0.75rem;
+    background-color: #4D17E2;
+}
+
+.sign-in .btn-sign-up{
+    padding: 0.75rem;
+    background-color: #E7EAF5;
+}
+
+
+.sign-in .button-group{
+    width: 100%;
+}
+
+@media (min-width: 992px){
+    .sign-in .container,
+    .sign-in input[type="password"],
+    .sign-in input[type="email"]{
+        max-width: 437px;
+    }
+    }
+
+/*  */

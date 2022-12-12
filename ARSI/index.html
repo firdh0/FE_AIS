@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="./assets/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/homepage.css">
+    <link rel="stylesheet" href="./css/utilities.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <title>Ruangguru</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <section>
+        <nav id="navbarTransition" class="navbar navbar-expand-lg navbar-light bg-light bg-white pt-10 pb-10">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/logo.png" width="60" height="60" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto text-lg gap-lg-0 gap-2">
+                        <li class="nav-item my-auto">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item my-auto">
+                            <a class="btn btn-sign-in d-flex justify-content-center ms-lg-2 rounded-pill"
+                                href="./src/sign-in.html" role="button">Masuk</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- Navbar -->
+
+    <!-- <section>
+        <div class="main__bg">
+            <img class="img-fluid" src="./assets/bg-main.png" alt="Responsive image">
+        </div>
+        <div style="position: absolute; top:0; bottom:0;">
+            <nav class="navbar navbar-expand-lg navbar-light pt-lg-40 pb-lg-40 pt-30 pb-50">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="./assets/logo.png" width="60" height="60" alt="">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto text-lg gap-lg-0 gap-2 ml-auto">
+                            <li class="nav-item my-auto">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item my-auto" style="width: 230px;">
+                                <a class="nav-link" href="#">Paket</a>
+                            </li>
+                            <li class="nav-item my-auto">
+                                <a class="btn btn-sign-in d-flex justify-content-center ms-lg-2 rounded-pill" style="width: 165px;"
+                                    href="./src/sign-in.html" role="button">Masuk</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+    </section> -->
+
+    <!-- Header -->
+    <section class="header pt-lg-60 pb-10">
+        <div class="container-xxl container-fluid">
+            <div class="row gap-lg-0 gap-5 justify-content-center">
+                <div class="col-lg-6 col-12">
+                    <p class="text-support text-lg color-palette-2">
+                        Halo students,
+                    </p>
+                    <h1 class="header-title color-palette-1 fw-bold">
+                        Bimbel
+                        <span class="underline-blue"> terbesar, </span> <br class="d-sm-block d-none"> 
+                        <span class="underline-blue"> terpercaya, </span> dan <br class="d-sm-block d-none"> 
+                        <span class="underline-blue"> terbesar </span> di Indonesia <br class="d-sm-block d-none"> 
+                    </h1>
+                    <p class="mt-30 mb-40 text-lg color-palette-1"> Ayo segera berlangganan </p>
+                    <div class="d-flex flex-lg-row flex-column gap-4">
+                        <a class="btn btn-get text-lg text-white rounded-pill" href="#feature" role="button">Get
+                            Started</a>
+                        <a class="btn-learn text-lg color-palette-1 my-auto text-center" href="#" role="button">Learn
+                            More</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 d-lg-block d-none">
+                    <div class="d-flex justify-content-lg-center justify-content-center">
+                        <div class="position-relative" data-aos="zoom-in">
+                            <img src="./assets/main-pic-7.png" width="700" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-6 col-12 d-lg-block d-none">
+                    <div class="d-flex justify-content-lg-end justify-content-center me-lg-5">
+                        <div >
+                            <div class="position-relative" style="left: -121px;">
+                                <img src="./assets/main-pic-1.png" data-aos="zoom-in" class="" alt="" style="width: 150%;">
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 Column - Feature -->
+    <section id="feature" class="feature pt-20 pb-50">
+        <div class="container-fluid">
+            <h2 class="text-4xl fw-bold color-palette-1 text-center mb-30">Kenapa harus<br> langganan Ruangguru?
+            </h2>
+            <div class="row gap-lg-0 gap-4" data-aos="fade-up">
+                <div class="col-lg-4">
+                    <div class="card feature-card border-0">
+                        <img class="mb-4" src="./assets/main-pic-2.png" width="80" height="80" alt="">
+                        <p class="fw-semibold text-2xl mb-2 color-palette-1 mb-2">Terbukti membantu nilai rapor naik</p>
+                        <p class="text-lg color-palette-1 mb-0">96% pengguna Ruangguru naik nilainya dalam 3 bulan</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card feature-card border-0">
+                        <img class="mb-4" src="./assets/main-pic-3.png" width="80" height="80" alt="">
+                        <p class="fw-semibold text-2xl mb-2 color-palette-1 mb-2">Terbukti membantu diterima di PTN</p>
+                        <p class="text-lg color-palette-1 mb-0">69% pelajar SMA pengguna Ruangguru berhasil diterima di PTN</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card feature-card border-0">
+                        <img class="mb-4" src="./assets/main-pic-4.png" width="80" height="80" alt="">
+                        <p class="fw-semibold text-2xl mb-2 color-palette-1 mb-2">Konten belajar lengkap dan interaktif</p>
+                        <p class="text-lg color-palette-1 mb-0">Dilengkapi video belajar beranimasi, kuis, dan rangkuman sesuai kurikulum nasional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story -->
+    <section class="story pt-50 pb-50">
+        <div class="container-xxl container-fluid">
+            <div class="row align-items-center px-lg-5 mx-auto gap-lg-0 gap-4">
+                <div class="col-lg-7 col-12 d-lg-flex d-none justify-content-lg-end pe-lg-60" data-aos="zoom-in">
+                    <img src="./assets/main-pic-5.png" width="800"  alt="">
+                </div>
+                <div class="col-lg-5 col-12 ps-lg-60">
+                    <div class="">
+                        <h2 class="text-4xl fw-bold color-palette-1 mb-30">Pahami materi pelajaran dengan konsep <span class="underline-yellow">KILAT</span>.
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer pt-50">
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 text-lg-start text-center">
+                        <a href="" class="mb-30">
+                            <img src="./assets/logo.png" width="60" height="60" alt="">
+                        </a>
+                        <p class="text-lg fw-semibold color-palette-1 mb-12 mt-3">Ruangguru</p>
+                        <p class="mt-30 text-lg color-palette-1 mb-30">Jl. Dr. Saharjo No.161, Manggarai Selatan, Tebet, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12860</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+
+    <!-- AOS Animation -->
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        document.addEventListener("scroll", function () {
+            const navbar = document.querySelector(".navbar");
+            const navbarHeight = 90;
+
+            const distanceFromTop = Math.abs(
+                document.body.getBoundingClientRect().top
+            );
+
+            console.log(distanceFromTop)
+
+            if (distanceFromTop > navbarHeight){ 
+                navbar.classList.add("fixed-top", "blur-background", "navbarTransition");
+                navbar.classList.remove("bg-light", "bg-white");
+            } else {
+                navbar.classList.add("bg-light", "bg-white");
+                navbar.classList.remove("fixed-top", "blur-background", "navbarTransition");
+            }
+        });
+    </script>
+    <!-- <script>
+        $(document).ready(function(){
+            $(".btn1").click(function(){
+                $("p").slideUp();
+            });
+            $(".btn2").click(function(){
+                $("p").slideDown();
+            });
+        });
+    </script> -->
+
+    <!-- <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("navbar").style.top = "0";
+            navbar.classList.add("blur-background");
+            navbar.classList.remove("bg-light", "bg-white");
+        } else {
+            // document.getElementById("navbar").style.top = "0px";
+            navbar.classList.add("bg-light", "bg-white");
+            navbar.classList.remove("blur-background");
+        }
+        }
+    </script> -->
+</body>
+
+</html>

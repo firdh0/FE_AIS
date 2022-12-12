@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="../assets/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/sign-up.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>Daftar</title>
+</head>
+
+<body>
+    <div id="loading-effect" class="position-absolute w-100 vh-100">
+        <div class="position-absolute top-50 start-50">
+            <div class="loader" role="status"></div>
+        </div>
+    </div>
+    
+    <!-- Sign Up -->
+    <section class="sign-up mx-auto pt-lg-100 pb-lg-100 pt-30 pb-47">
+        <div class="container mx-auto">
+            <form action="">
+                <div class="pb-50">
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../assets/logo.png" width="60" height="60" alt="">
+                    </a>
+                </div>
+                <h2 class="text-4xl fw-bold color-palette-1 mb-10">Daftar</h2>
+                <p class="text-lg color-palette-1 m-0">Daftar dan mulailah berlangganan</p>
+                <div class="pt-50">
+                    <label for="name" class="form-label text-lg fw-medium color-palette-1 mb-10">Nama Lengkap</label>
+                    <input type="text" class="form-control rounded-pill text-lg" id="name" name="name"
+                        aria-describedby="name" placeholder="Masukkan nama lengkap kamu dong">
+                </div>
+                <div class="pt-30">
+                    <label for="email" class="form-label text-lg fw-medium color-palette-1 mb-10">Email</label>
+                    <input type="email" class="form-control rounded-pill text-lg" id="email" name="email"
+                        aria-describedby="email" placeholder="Masukkan email kamu ya">
+                </div>
+                <div class="pt-30">
+                    <label for="password" class="form-label text-lg fw-medium color-palette-1 mb-10">Password</label>
+                    <input type="password" class="form-control rounded-pill text-lg" id="password" name="password"
+                        aria-describedby="password" placeholder="Eitss, passwordnya juga dong">
+                </div>
+                <div class="pt-50 pb-50">
+                    <label for="category" class="form-label text-lg fw-medium color-palette-1 mb-10">Kategori Kelas</label>
+                    <select id="category" name="category" class="form-select d-block w-100 rounded-pill text-lg"
+                        aria-label="Favorite Game">
+                        <option value="" disabled selected>Pilih kelas</option>
+                        <option value="1">Kelas 1 SD</option>
+                        <option value="2">Kelas 2 SD</option>
+                        <option value="3">Kelas 3 SD</option>
+                        <option value="4">Kelas 4 SD</option>
+                        <option value="5">Kelas 5 SD</option>
+                        <option value="6">Kelas 6 SD</option>
+                        <option value="7">Kelas 1 SMP</option>
+                        <option value="8">Kelas 2 SMP</option>
+                        <option value="9">Kelas 3 SMP</option>
+                        <option value="10">Kelas 1 SMA</option>
+                        <option value="11">Kelas 2 SMA</option>
+                        <option value="12">Kelas 3 SMA</option>
+                        <option value="13">UTBK</option>
+                    </select>
+                </div>
+                <div class="button-group d-flex flex-column mx-auto pt-50">
+                    <a id="button-daftar" class="btn btn-sign-up fw-medium text-lg text-white rounded-pill mb-16"
+                        role="button">Lanjutkan</a>
+                    <!-- <button type="submit" class="btn btn-sign-up fw-medium text-lg text-white rounded-pill mb-16"
+                        role="button">Continue</button> -->
+                    <a class="btn btn-sign-in fw-medium text-lg color-palette-1 rounded-pill" href="../src/sign-in.html"
+                        role="button">Masuk</a>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Error Toast -->
+    <div id="toast-container" class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // document.addEventListener('DOMContentLoaded', () => {
+        //     if(getCookie('token') != "")
+        //         window.location.href = "...{end_point}...";
+        // });
+        
+        document.getElementById('button-daftar').addEventListener('click', () => {
+            document.getElementById('loading-effect').style.display = 'block'
+
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+
+            let _data = {
+                nama_lengkap: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value,
+                kelas: document.getElementById('category').value
+            }
+
+            // console.log(_data);
+
+            reqHeader['Content-type'] = 'application/x-www-form-urlencoded'
+            sendPostRequest('/daftar', _data, (response) => {
+                document.getElementById('loading-effect').style.display = '';
+                window.location.href = "./sign-up-success.html"
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+
+
+</body>
+
+</html>
